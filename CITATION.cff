@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+# Creative description shown by GitHub's "Cite this repository" widget.
+message: "If you use this work, cite it using these metadata (and the Zenodo DOI of an archived GitHub release)."
+title: "Deterministic Reinforcement Learning and AI Orchestration"
+authors:
+  - family-names: Machuca
+    given-names: "Jean"
+    orcid: "https://orcid.org/0009-0004-9924-2911"
+    affiliation: "CognitiveOS-Labs"
+type: software
+date-released: 2026-08-15
+license: MIT
+license-url: https://github.com/agentic-framework-research/drl-ai-orchestration/blob/main/LICENSE
+keywords:
+  - reinforcement learning
+  - artificial intelligence
+  - orchestration
+  - arXiv
+  - zenodo
+repository-code: https://github.com/agentic-framework-research/drl-ai-orchestration
+# doi: 10.5281/zenodo.<assigned-after-first-GitHub-Release>
+related-identifiers:
+  - type: software
+    url: https://github.com/agentic-framework-skills/OSMv6
+    description: "Code representation — the OSMv6 Orchestrator Engine (agentic-framework-skills org)."

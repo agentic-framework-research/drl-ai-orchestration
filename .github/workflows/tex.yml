@@ -1,0 +1,43 @@
+name: Build paper
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install TeX Live (xelatex + bibtex + extras)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-latex-extra texlive-bibtex-extra
+      - name: Build PDF
+        run: |
+          cd paper
+          xelatex main.tex
+          bibtex main || true
+          xelatex main.tex
+          xelatex main.tex
+      - name: Package arXiv submission
+        if: always()
+        run: |
+          cd paper
+          tar -czf ../arxiv.tar.gz --exclude='*.aux' --exclude='*.log' --exclude='*.toc' --exclude='*.out' --exclude='*.dvi' --exclude='*.bbl' --exclude='*.blg' --exclude='*.pdf' -- .
+      - name: Upload PDF
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-pdf
+          path: paper/main.pdf
+          if-no-files-found: warn
+      - name: Upload arXiv submission
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: arxiv-submission
+          path: arxiv.tar.gz
+          if-no-files-found: warn
