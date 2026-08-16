@@ -1,7 +1,7 @@
-# Deterministic Reinforcement Learning and AI Orchestration
+# Orchestrator Engine V6
 
-This is the **paper repository** for *"Deterministic Reinforcement Learning and AI
-Orchestration"* by Jean Machuca (CognitiveOS-Labs).
+This is the **paper repository** for *"Orchestrator Engine V6: A Deterministic, Self-Healing
+State Machine Architecture for Enterprise LLM Intent Routing"*.
 
 - **arXiv preprint**: [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX) *(added on submission)*
 - **Zenodo archive / DOI**: [10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX) *(minted on first GitHub Release)*
@@ -12,7 +12,16 @@ Orchestration"* by Jean Machuca (CognitiveOS-Labs).
 
 ## Abstract
 
-> _Placeholder._ Replace this section with the paper's abstract.
+> Large Language Model (LLM) agents deployed in enterprise environments face critical failures
+> regarding stochastic non-determinism, state drift during asynchronous operations, and
+> susceptibility to graph poisoning via untrusted external tool outputs. In this paper, we
+> present **Orchestrator Engine V6**, a unified state-machine control plane combining
+> deterministic graph routing, additive sentiment scaling, stateless horizon persistence, and
+> zero-trust asynchronous healing. V6 guarantees $0.0\%$ hallucination on known execution paths
+> while bounding compute latency to $\mathcal{O}(1)$ for exact matches and $\mathcal{O}(K)$ for
+> indexed edge lookups. We formalize the mathematical convergence of bounded reinforcement weight
+> updates under asymmetric decay and establish security guarantees for asynchronous external graph
+> mutations.
 
 ---
 
@@ -40,9 +49,9 @@ Prefer the **Zenodo DOI** of an archived release; a preprint is also on **arXiv*
 Citation metadata lives in [`CITATION.cff`](CITATION.cff).
 
 ```bibtex
-@article{Machuca2026drl,
+@article{Machuca2026osm,
   author    = {Machuca, Jean},
-  title     = {Deterministic Reinforcement Learning and {AI} Orchestration},
+  title     = {Orchestrator Engine {V6}: A Deterministic, Self-Healing State Machine Architecture for Enterprise {LLM} Intent Routing},
   year      = {2026},
   doi       = {10.5281/zenodo.XXXXXXX}
 }
@@ -71,3 +80,6 @@ xelatex main.tex
 **Jean Machuca** — [GitHub @jeanmachuca](https://github.com/jeanmachuca) ·
 [ORCID 0009-0004-9924-2911](https://orcid.org/0009-0004-9924-2911) ·
 [Sponsor on GitHub Sponsors](https://github.com/sponsors/jeanmachuca)
+
+The paper's title block additionally credits the *Autonomous AI Systems Research Group*
+(`research@orchestrator.ai`).

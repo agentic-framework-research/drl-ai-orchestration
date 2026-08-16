@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 # Creative description shown by GitHub's "Cite this repository" widget.
 message: "If you use this work, cite it using these metadata (and the Zenodo DOI of an archived GitHub release)."
-title: "Deterministic Reinforcement Learning and AI Orchestration"
+title: "Orchestrator Engine V6: A Deterministic, Self-Healing State Machine Architecture for Enterprise LLM Intent Routing"
 authors:
   - family-names: Machuca
     given-names: "Jean"
