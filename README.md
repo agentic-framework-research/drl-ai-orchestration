@@ -15,9 +15,10 @@ State Machine Architecture for Enterprise LLM Intent Routing"*.
 > Large Language Model (LLM) agents deployed in enterprise environments face critical failures
 > regarding stochastic non-determinism, state drift during asynchronous operations, and
 > susceptibility to graph poisoning via untrusted external tool outputs. In this paper, we
-> present **Orchestrator Engine V6**, a unified state-machine control plane combining
-> deterministic graph routing, additive sentiment scaling, stateless horizon persistence, and
-> zero-trust asynchronous healing. V6 guarantees $0.0\%$ hallucination on known execution paths
+> present **Orchestrator Engine OSM V6** (OSM = **O**mnipresent **S**tate **M**achine), a unified
+> state-machine control plane combining deterministic graph routing, additive sentiment scaling,
+> stateless horizon persistence, and zero-trust asynchronous healing. OSM V6 guarantees
+> $0.0\%$ hallucination on known execution paths
 > while bounding compute latency to $\mathcal{O}(1)$ for exact matches and $\mathcal{O}(K)$ for
 > indexed edge lookups. We formalize the mathematical convergence of bounded reinforcement weight
 > updates under asymmetric decay and establish security guarantees for asynchronous external graph
