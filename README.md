@@ -80,6 +80,3 @@ xelatex main.tex
 **Jean Machuca** — [GitHub @jeanmachuca](https://github.com/jeanmachuca) ·
 [ORCID 0009-0004-9924-2911](https://orcid.org/0009-0004-9924-2911) ·
 [Sponsor on GitHub Sponsors](https://github.com/sponsors/jeanmachuca)
-
-The paper's title block additionally credits the *Autonomous AI Systems Research Group*
-(`research@orchestrator.ai`).
