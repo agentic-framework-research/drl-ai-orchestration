@@ -68,12 +68,12 @@ Execution follows a strictly defined piecewise decision boundary:
 \begin{equation}
 \text{Action}(\mathcal{S}_t) = 
 \begin{cases} 
-\text{EXECUTE}(v_{\text{target}}), & \text{if } w_{\text{adj}} \ge \theta_{\text{high}} \\
-\text{DISAMBIGUATE}(K), & \text{if } \theta_{\text{low}} \le w_{\text{adj}} < \theta_{\text{high}} \\
-\text{FALLBACK}(\mathcal{S}_t), & \text{if } w_{\text{adj}} < \theta_{\text{low}}
+\text{EXECUTE}(v_{\text{target}}), & w_{\text{adj}} \ge \theta_H \\
+\text{DISAMBIGUATE}(K), & \theta_L \le w_{\text{adj}} < \theta_H \\
+\text{FALLBACK}(\mathcal{S}_t), & w_{\text{adj}} < \theta_L
 \end{cases}
 \end{equation}
-where $\theta_{\text{high}} = 0.85$ and $\theta_{\text{low}} = 0.40$.
+where $\theta_H = 0.85$ and $\theta_L = 0.40$.
 
 \section{State Freeze, Self-Healing, and Security}
 
