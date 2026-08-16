@@ -36,7 +36,7 @@ While Generative Pre-trained Transformers (GPT) excel at qualitative reasoning, 
     \item \textbf{Context Window Exhaustion:} State loss during delayed user interactions (e.g., in-band disambiguation).
 \end{enumerate}
 
-To resolve these failure modes, we present \textbf{Orchestrator Engine V6}, an omnipresent state machine that enforces absolute execution boundaries over probabilistic routing pipelines.
+To resolve these failure modes, we present \textbf{Orchestrator Engine V6}, an omnipresent state machine that enforces absolute execution boundaries over probabilistic routing pipelines. This architecture builds on the statechart formalism for hierarchical state machines \cite{state_machines} and the ReAct paradigm for synergizing reasoning with action in language models \cite{llm_agents}.
 
 \section{System Formalization}
 
@@ -106,7 +106,7 @@ Edge updates driven by direct user feedback follow an asymmetric reward-decay me
 w_{t+1}(e_{\text{boost}}) &= \min\left(1.0, \, w_t(e_{\text{boost}}) + \alpha\right) \\
 w_{t+1}(e_{\text{decay}}) &= \max\left(0.0, \, w_t(e_{\text{decay}}) - \beta\right)
 \end{align}
-where learning rate $\alpha = 0.15$ and penalty decay rate $\beta = 0.25$. The asymmetric condition $\beta > \alpha$ ensures rapid pruning of bad pathways while requiring sustained confirmation to raise routing weights.
+where learning rate $\alpha = 0.15$ and penalty decay rate $\beta = 0.25$. The asymmetric condition $\beta > \alpha$ ensures rapid pruning of bad pathways while requiring sustained confirmation to raise routing weights, consistent with the asymmetric update principles in reinforcement learning theory \cite{reinforcement}.
 
 \section{Algorithm Specifications}
 
