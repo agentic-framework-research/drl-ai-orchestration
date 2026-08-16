@@ -24,7 +24,7 @@
 \maketitle
 
 \begin{abstract}
-Large Language Model (LLM) agents deployed in enterprise environments face critical failures regarding stochastic non-determinism, state drift during asynchronous operations, and susceptibility to graph poisoning via untrusted external tool outputs. In this paper, we present \textbf{Orchestrator Engine V6}, a unified state-machine control plane combining deterministic graph routing, additive sentiment scaling, stateless horizon persistence, and zero-trust asynchronous healing. V6 guarantees $0.0\%$ hallucination on known execution paths while bounding compute latency to $\mathcal{O}(1)$ for exact matches and $\mathcal{O}(K)$ for indexed edge lookups. We formalize the mathematical convergence of bounded reinforcement weight updates under asymmetric decay and establish security guarantees for asynchronous external graph mutations.
+Large Language Model (LLM) agents deployed in enterprise environments face critical failures regarding stochastic non-determinism, state drift during asynchronous operations, and susceptibility to graph poisoning via untrusted external tool outputs. In this paper, we present \textbf{Orchestrator Engine OSM V6}, a unified state-machine control plane combining deterministic graph routing, additive sentiment scaling, stateless horizon persistence, and zero-trust asynchronous healing. OSM V6 guarantees $0.0\%$ hallucination on known execution paths while bounding compute latency to $\mathcal{O}(1)$ for exact matches and $\mathcal{O}(K)$ for indexed edge lookups. We formalize the mathematical convergence of bounded reinforcement weight updates under asymmetric decay and establish security guarantees for asynchronous external graph mutations.
 \end{abstract}
 
 \section{Introduction}
@@ -36,7 +36,7 @@ While Generative Pre-trained Transformers (GPT) excel at qualitative reasoning, 
     \item \textbf{Context Window Exhaustion:} State loss during delayed user interactions (e.g., in-band disambiguation).
 \end{enumerate}
 
-To resolve these failure modes, we present \textbf{Orchestrator Engine V6}, an omnipresent state machine that enforces absolute execution boundaries over probabilistic routing pipelines. This architecture builds on the statechart formalism for hierarchical state machines \cite{state_machines} and the ReAct paradigm for synergizing reasoning with action in language models \cite{llm_agents}.
+To resolve these failure modes, we present \textbf{Orchestrator Engine OSM V6}, an omnipresent state machine that enforces absolute execution boundaries over probabilistic routing pipelines. This architecture builds on the statechart formalism for hierarchical state machines \cite{state_machines} and the ReAct paradigm for synergizing reasoning with action in language models \cite{llm_agents}.
 
 \section{System Formalization}
 
@@ -156,7 +156,7 @@ The primary waterfall execution routine is outlined in Algorithm \ref{alg:waterf
 \vspace{2mm}
 \begin{tabular}{lccc}
 \toprule
-\textbf{Architecture Metric} & \textbf{Naive LLM} & \textbf{Engine V4} & \textbf{Engine V6} \\
+\textbf{Architecture Metric} & \textbf{Naive LLM} & \textbf{Engine V4} & \textbf{Engine OSM V6} \\
 \midrule
 Deterministic Guarantees & $0.0\%$ & $82.5\%$ & $\mathbf{100.0\%}$ \\
 Graph Poisoning Defenses & None & Heuristic & \textbf{HMAC + $\tau_{0.90}$} \\
@@ -168,7 +168,7 @@ Loop Prevention & None & Timeout & \textbf{Hard Bound ($r \le 2$)} \\
 \end{table}
 
 \section{Conclusion}
-ORCHESTRATOR\_ENGINE\_V6 establishes a mathematically robust control plane for enterprise LLM operations. By encapsulating probabilistic intent retrieval within a deterministic state machine equipped with HMAC verification, frozen state persistence, bounded weight updates, and additive sentiment scaling, V6 resolves core industry challenges around latency, security, and execution reliability.
+ORCHESTRATOR\_ENGINE\_OSM\_V6 establishes a mathematically robust control plane for enterprise LLM operations. By encapsulating probabilistic intent retrieval within a deterministic state machine equipped with HMAC verification, frozen state persistence, bounded weight updates, and additive sentiment scaling, OSM V6 resolves core industry challenges around latency, security, and execution reliability.
 
 \begin{thebibliography}{99}
 \bibitem{state_machines}
