@@ -14,7 +14,7 @@ jobs:
       - name: Install TeX Live (xelatex + bibtex + extras)
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-latex-extra texlive-bibtex-extra
+          sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-latex-extra texlive-bibtex-extra texlive-science
       - name: Build PDF
         run: |
           cd paper

@@ -1,6 +1,6 @@
-# Orchestrator Engine V6
+# Orchestrator Engine OSM V6
 
-This is the **paper repository** for *"Orchestrator Engine V6: A Deterministic, Self-Healing
+This is the **paper repository** for *"Orchestrator Engine OSM V6: A Deterministic, Self-Healing
 State Machine Architecture for Enterprise LLM Intent Routing"*.
 
 - **arXiv preprint**: [arXiv:XXXX.XXXXX](https://arxiv.org/abs/XXXX.XXXXX) *(added on submission)*
@@ -51,7 +51,7 @@ Citation metadata lives in [`CITATION.cff`](CITATION.cff).
 ```bibtex
 @article{Machuca2026osm,
   author    = {Machuca, Jean},
-  title     = {Orchestrator Engine {V6}: A Deterministic, Self-Healing State Machine Architecture for Enterprise {LLM} Intent Routing},
+  title     = {Orchestrator Engine {OSM} {V6}: A Deterministic, Self-Healing State Machine Architecture for Enterprise {LLM} Intent Routing},
   year      = {2026},
   doi       = {10.5281/zenodo.XXXXXXX}
 }
